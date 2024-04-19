@@ -1,6 +1,10 @@
 const input = document.querySelector("input[type='file']");
 const loader = document.querySelector("#loader");
 
+const upscaler = new Upscaler({
+  model: DefaultUpscalerJSModel,
+});
+
 function readFile(file) {
   const reader = new FileReader();
   reader.readAsDataURL(file);
@@ -10,10 +14,6 @@ function readFile(file) {
     };
   });
 }
-
-const upscaler = new Upscaler({
-  model: DefaultUpscalerJSModel,
-});
 
 function createImage(image, visibility = true, container = document.body) {
   const img = document.createElement("img");
@@ -65,12 +65,7 @@ input.addEventListener("change", () => {
         await saveImage(newImg);
       });
     } catch (err) {
-      if (
-        err.message ===
-        "Requested texture size [17590x17590] greater than WebGL maximum on this browser / GPU [16384x16384]."
-      ) {
-        alert("The image is too big to be upscaled.");
-      }
+      alert("The image is too big to be upscaled.");
     }
     input.value = "";
     loader.classList.toggle("d-none");
