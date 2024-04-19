@@ -9,6 +9,7 @@ body {
 
 .position-fixed {
   position: fixed;
+  width: 100%;
 }
 
 .bg-theme {
@@ -75,9 +76,6 @@ body {
   }
 }
 
-nav {
-  width: 100svw;
-}
 nav h1 {
   font-family: "Lilita One", sans-serif;
   font-weight: 300;
