@@ -64,7 +64,6 @@ input.addEventListener("change", () => {
         const newImg = await createImage(result, false);
         await saveImage(newImg);
       });
-      await new Promise((resolve) => setTimeout(resolve, 4000));
     } catch (err) {
       if (
         err.message ===
@@ -75,41 +74,5 @@ input.addEventListener("change", () => {
     }
     loader.classList.toggle("d-none");
     document.body.classList.toggle("position-fixed");
-
-    // sleep 4s
   });
 });
-
-// const input = document.querySelector("input[type='file']");
-
-// function handleFD(inputFile, callback) {
-//   const file = inputFile.files[0];
-//   const reader = new FileReader();
-
-//   reader.onload = function (event) {
-//     callback(event.target.result);
-//   };
-
-//   reader.readAsDataURL(file);
-// }
-
-// input.addEventListener("change", () => {
-//   handleFiles(input, function (base64) {
-//     console.log(base64); // Fai qualcosa con il base64, ad esempio lo invii al server
-
-//     const upscaler = new Upscaler({
-//       model: DefaultUpscalerJSModel,
-//       content: base64,
-//     });
-
-//     upscaler.upscale().then((result) => {
-//       console.log(result);
-//     });
-//   });
-
-//   //   upscaler.upscale().then((result) => {
-//   //     console.log(result);
-//   //   });
-
-//   //
-// });
