@@ -72,6 +72,7 @@ input.addEventListener("change", () => {
         alert("The image is too big to be upscaled.");
       }
     }
+    input.value = "";
     loader.classList.toggle("d-none");
     document.body.classList.toggle("position-fixed");
   });
