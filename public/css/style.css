@@ -1,0 +1,133 @@
+:root {
+  --bg-body: #101010;
+}
+
+body {
+  color: white;
+  background: var(--bg-body);
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.bg-theme {
+  background: var(--bg-body);
+}
+
+body > .container {
+  padding-block: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+body {
+  position: relative;
+}
+
+#loader {
+  position: absolute;
+  height: 100svh;
+  width: 100svw;
+  background: var(--bg-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loader .meter {
+  height: 5px;
+  position: relative;
+  background: #383838;
+  overflow: hidden;
+  height: 100px;
+  width: min(600px, 100% - 1rem);
+  border-radius: 50px;
+}
+#loader .meter span {
+  display: block;
+  height: 100%;
+}
+#loader .progress {
+  background: linear-gradient(90deg, #5200FF 0%, #FF8A00 100%);
+  animation: progressBar 3s ease-in-out;
+}
+@keyframes progressBar {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+nav {
+  width: 100svw;
+}
+nav h1 {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 300;
+  position: relative;
+}
+nav h1::before {
+  content: "";
+  display: block;
+  background: linear-gradient(90deg, #5200FF 0%, #FF8A00 100%);
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  width: 50%;
+  height: 6px;
+}
+nav .nav-item a {
+  font-weight: 900;
+}
+
+.btn {
+  background: linear-gradient(90deg, #5200FF 0%, #FF8A00 100%);
+  border: none;
+  padding: 0.8rem 1.4rem;
+}
+
+.container-form {
+  background: #151515;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  border: 0.25rem solid #A7A7A7;
+  border-style: dashed;
+}
+.container-form p {
+  font-weight: 200;
+  margin-block: 1rem;
+}
+.container-form b {
+  background: #232323;
+  padding: 0.2rem 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #3D3D3D;
+}
+.container-form a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.container-form .btn {
+  margin-top: 0.5rem;
+}
+.container-form input[type=file] {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

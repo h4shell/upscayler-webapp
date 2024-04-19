@@ -1,0 +1,33 @@
+.container-form{
+    background: #151515;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    border: .25rem solid #A7A7A7;
+    border-style: dashed ;
+
+    p{
+        font-weight: 200;
+        margin-block: 1rem;
+    }
+
+    b{
+        background: #232323;
+        padding: .2rem .3rem;
+        border-radius: 5px;
+        border: 1px solid #3D3D3D
+    }
+
+    a{
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .btn{
+        margin-top: .5rem;
+    }
+
+    input[type="file"]{
+        display: none;
+    }
+}

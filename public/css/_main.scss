@@ -1,0 +1,27 @@
+:root{
+    --bg-body: #101010;
+}
+
+body{
+    color: white;
+    background: var(--bg-body);
+}
+
+.position-fixed{
+    position: fixed;
+}
+
+.bg-theme{
+    background: var(--bg-body);
+
+}
+
+body>.container {
+
+    padding-block: 2rem;
+}
+
+img{
+    width: 100%;
+}
+

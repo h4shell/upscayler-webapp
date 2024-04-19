@@ -1,0 +1,64 @@
+body{
+    position: relative;
+}
+
+#loader{
+    position: absolute;
+    height: 100svh;
+    width: 100svw;
+    background: var(--bg-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .meter {
+            height: 5px;
+            position: relative;
+            background: #383838;
+            overflow: hidden;
+            height: 100px;
+            width: min(600px, 100% - 1rem);
+            border-radius: 50px;
+        }
+    
+        .meter span {
+            display: block;
+            height: 100%;
+        }
+    
+        .progress {
+            background: linear-gradient(90deg, #5200FF 0%, #FF8A00 100%);
+            animation: progressBar 3s ease-in-out;
+        }
+
+        @keyframes progressBar {
+            0% {
+                width: 10%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    
+        @-webkit-keyframes progressBar {
+            0% {
+                width: 0;
+            }
+    
+            100% {
+                width: 100%;
+            }
+        }
+    
+        @-moz-keyframes progressBar {
+            0% {
+                width: 0;
+            }
+    
+            100% {
+                width: 100%;
+            }
+        }
+
+}
