@@ -128,4 +128,9 @@ nav .nav-item a {
 }
 .container-form input[type=file] {
   display: none;
+}
+
+footer {
+  padding-block: 2rem;
+  border-top: 1px solid rgb(73, 73, 73);
 }/*# sourceMappingURL=style.css.map */
